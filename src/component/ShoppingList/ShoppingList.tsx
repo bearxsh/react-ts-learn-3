@@ -36,6 +36,13 @@ class ShoppingList extends React.Component<MyProps, MyState> {
 
     render() {
         const name = "Peter";
+        const isToggleOn = this.state.isToggleOn;
+        let button;
+        if (isToggleOn) {
+            button = <h1>开启</h1>;
+        } else {
+            button = <h1>关闭</h1>
+        }
         return (
             <div className="shopping-list">
                 <h3>Shopping List for {sayHello("Jack")}</h3>
@@ -48,6 +55,9 @@ class ShoppingList extends React.Component<MyProps, MyState> {
                 </ul>
                 <button onClick={this.handleClick.bind(this)}>{this.state.isToggleOn ? "ON" : "OFF"}</button>
                 <button onClick={this.deleteRow.bind(this, name)}>click me</button>
+                {button}
+                {isToggleOn && <div>开启</div>}
+                {isToggleOn ? <h1>开启</h1> : <h1>关闭</h1>}
             </div>
         );
     }
