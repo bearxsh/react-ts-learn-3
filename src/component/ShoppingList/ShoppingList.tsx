@@ -43,6 +43,7 @@ class ShoppingList extends React.Component<MyProps, MyState> {
         } else {
             button = <h1>关闭</h1>
         }
+        const numbers = [1,3,5,7,9];
         return (
             <div className="shopping-list">
                 <h3>Shopping List for {sayHello("Jack")}</h3>
@@ -58,6 +59,8 @@ class ShoppingList extends React.Component<MyProps, MyState> {
                 {button}
                 {isToggleOn && <div>开启</div>}
                 {isToggleOn ? <h1>开启</h1> : <h1>关闭</h1>}
+                {numbers.map((number) => <li key={number}>{number * 2}</li>)}
+                <input value={name}/>
             </div>
         );
     }
