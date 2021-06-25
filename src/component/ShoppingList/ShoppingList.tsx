@@ -1,5 +1,13 @@
 import React from "react";
 import instance from "../../axios-config";
+import {ConfigProvider, DatePicker} from "antd";
+import "antd/dist/antd.css";
+import zhCN from 'antd/lib/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+
+moment.locale("zh-cn");
+
 const {BrowserRouter, Switch, Route, Link}  = require("react-router-dom");
 
 function sayHello(name: string) {
@@ -33,14 +41,14 @@ class ShoppingList extends React.Component<MyProps, MyState> {
 
         instance.get("/")
             .then(function (response: any) {
-                console.log(response.data);
+                //console.log(response.data);
             })
             .catch(function (error: any) {
-                console.log("出现错误！");
-                console.log(error);
+                //console.log("出现错误！");
+                //console.log(error);
             })
             .then(function () {
-                console.log("我总是被执行！")
+                //console.log("我总是被执行！")
             })
     }
     componentWillUnmount(): void {
@@ -91,6 +99,9 @@ class ShoppingList extends React.Component<MyProps, MyState> {
                             </Route>
                         </Switch>
                     </BrowserRouter>
+                    <ConfigProvider locale={zhCN}>
+                        <DatePicker />
+                    </ConfigProvider>
                 </div>
 
 

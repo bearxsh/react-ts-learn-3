@@ -19,7 +19,7 @@ function App() {
                     Learn React
                 </a>
             </header>
-          <div className="sub-title">Don't you?</div>
+          <div className="sub-title">冲冲冲</div>
         </div>
     );
 }
