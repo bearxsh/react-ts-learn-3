@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+{/*    <App />*/}
     <Footer />
     <ShoppingList name="Bearxsh" />
   </React.StrictMode>,
