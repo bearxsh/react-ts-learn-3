@@ -23,6 +23,7 @@ interface MyState {
     date: Date,
     isToggleOn: boolean
 }
+
 class ShoppingList extends React.Component<MyProps, MyState> {
     private timerId: number;
 
@@ -51,6 +52,11 @@ class ShoppingList extends React.Component<MyProps, MyState> {
                 //console.log("我总是被执行！")
             })
     }
+
+    componentDidUpdate(prevProps: Readonly<MyProps>, prevState: Readonly<MyState>, snapshot?: any) {
+        console.log("我的值被更新了？");
+    }
+
     componentWillUnmount(): void {
         console.log("我被卸载了");
         clearInterval(this.timerId);

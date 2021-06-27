@@ -4,10 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {Col, Menu, Row} from "antd";
 import "antd/dist/antd.css";
+import BearButton from "./component/BearButton/BearButton";
 
 const {SubMenu} = Menu;
 
 const style1 = {background: '#0092ff'};
+
 
 ReactDOM.render(
     <React.StrictMode>
@@ -22,6 +24,9 @@ ReactDOM.render(
                     <Menu.Item key="facebook">Facebook</Menu.Item>
                     <Menu.Item key="youtube" style={style1}>YouTube</Menu.Item>
                 </Menu>
+            </Col>
+            <Col span={12}>
+                <BearButton><a href="https://www.baidu.com">fdfd</a></BearButton>
             </Col>
         </Row>
     </React.StrictMode>,
