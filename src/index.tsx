@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import {Col, Menu, Row} from "antd";
 import "antd/dist/antd.css";
 import BearButton from "./component/BearButton/BearButton";
+import BearMenu from "./component/BearMenu/BearMenu";
+import BearMenuItem from "./component/BearMenu/BearMenuItem";
 
 const {SubMenu} = Menu;
 
@@ -16,17 +18,15 @@ ReactDOM.render(
         <Row>
             {/*组件自研！*/}
             <Col span={12}>
-                <Menu mode="horizontal">
-                    <SubMenu key="tech" title="科技">
-                        <Menu.Item key="apple">苹果</Menu.Item>
-                        <Menu.Item key="google">谷歌</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="facebook">Facebook</Menu.Item>
-                    <Menu.Item key="youtube" style={style1}>YouTube</Menu.Item>
+                <BearMenu>
+                    <BearMenuItem>苹果</BearMenuItem>
+                    <BearMenuItem>谷歌</BearMenuItem>
+                    <BearMenuItem>特斯拉</BearMenuItem>
+                    <BearMenuItem>Facebook</BearMenuItem>
+                </BearMenu>
+                <Menu>
+                    <Menu.Item></Menu.Item>
                 </Menu>
-            </Col>
-            <Col span={12}>
-                <BearButton><a href="https://www.baidu.com">fdfd</a></BearButton>
             </Col>
         </Row>
     </React.StrictMode>,
