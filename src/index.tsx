@@ -7,7 +7,7 @@ import "antd/dist/antd.css";
 import BearButton from "./component/BearButton/BearButton";
 import BearMenu from "./component/BearMenu/BearMenu";
 import BearMenuItem from "./component/BearMenu/BearMenuItem";
-
+import Test from "./component/Test/Test";
 const {SubMenu} = Menu;
 
 const style1 = {background: '#0092ff'};
@@ -19,14 +19,19 @@ ReactDOM.render(
             {/*组件自研！*/}
             <Col span={12}>
                 <BearMenu>
-                    <BearMenuItem>苹果</BearMenuItem>
-                    <BearMenuItem>谷歌</BearMenuItem>
-                    <BearMenuItem>特斯拉</BearMenuItem>
-                    <BearMenuItem>Facebook</BearMenuItem>
+                    <BearMenuItem id="apple">苹果</BearMenuItem>
+                    <BearMenuItem id="google">谷歌</BearMenuItem>
+                    <BearMenuItem id="tesla">特斯拉</BearMenuItem>
+                    <BearMenuItem id="facebook">Facebook</BearMenuItem>
                 </BearMenu>
                 <Menu>
-                    <Menu.Item></Menu.Item>
+                    <Menu.Item key="fdfd">2</Menu.Item>
+                    <Menu.Item key="vvv">1</Menu.Item>
+                    <Menu.Item key="xx">4</Menu.Item>
                 </Menu>
+            </Col>
+            <Col span={12}>
+
             </Col>
         </Row>
     </React.StrictMode>,

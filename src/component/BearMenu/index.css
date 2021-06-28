@@ -16,3 +16,7 @@
 .menu-wrap li:hover {
     color: blueviolet;
 }
+
+.menu-wrap li.active {
+    color: blueviolet;
+}
