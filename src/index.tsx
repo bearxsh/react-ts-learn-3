@@ -23,6 +23,16 @@ ReactDOM.render(
                 <BearMenu>
                     <BearMenuItem id="apple">苹果</BearMenuItem>
                     <BearMenuItem id="google">谷歌</BearMenuItem>
+                    <BearSubMenu title={"更多"}>
+                        <BearMenuItem id="twitter">Twitter</BearMenuItem>
+                        <BearMenuItem id="react">React</BearMenuItem>
+                        <BearMenuItem id="vue">Vue</BearMenuItem>
+                    </BearSubMenu>
+                    <BearSubMenu title={"更多"}>
+                        <BearMenuItem id="twitter">Twitter</BearMenuItem>
+                        <BearMenuItem id="react">React</BearMenuItem>
+                        <BearMenuItem id="vue">Vue</BearMenuItem>
+                    </BearSubMenu>
                     <BearMenuItem id="tesla">特斯拉</BearMenuItem>
                     <BearMenuItem id="facebook">Facebook</BearMenuItem>
                     <BearSubMenu title={"更多"}>
