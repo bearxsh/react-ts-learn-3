@@ -6,7 +6,7 @@ export interface BearMenuContextProps {
 }
 
 const defaultContextProps: BearMenuContextProps = {
-    selectedItem: "tesla",
+    selectedItem: "home",
     handleClick: (id: string) => {console.log(id + "is clicked!");}
 };
 

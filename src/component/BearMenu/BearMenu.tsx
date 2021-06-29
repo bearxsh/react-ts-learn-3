@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './index.css';
+import './index.scss';
 import classNames from "classnames";
 import BearMenuContext, {BearMenuContextProps} from "./BearMenuContext";
 
@@ -9,7 +9,7 @@ interface BearMenuProps {
 }
 
 function BearMenu(props: BearMenuProps) {
-    const [selectedItem, setSelectedItem] = useState("tesla");
+    const [selectedItem, setSelectedItem] = useState("home");
     const handleClick = (id: string) => {
         console.log(id + " 被点击了！");
         setSelectedItem(id);
