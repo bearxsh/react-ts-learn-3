@@ -1,9 +1,15 @@
 import React from "react";
 
-interface BearMenuContextProps {
+export interface BearMenuContextProps {
     selectedItem: string;
+    handleClick: (id: string) => void;
 }
 
-const BearMenuContext = React.createContext<BearMenuContextProps>({selectedItem: "2"});
+const defaultContextProps: BearMenuContextProps = {
+    selectedItem: "tesla",
+    handleClick: (id: string) => {console.log(id + "is clicked!");}
+};
+
+const BearMenuContext = React.createContext<BearMenuContextProps>(defaultContextProps);
 
 export default BearMenuContext;

@@ -9,13 +9,14 @@ interface BearMenuItemProps {
 }
 
 function BearMenuItem(props: BearMenuItemProps) {
-    //console.log(props.id);
     const context = useContext(BearMenuContext);
-    console.log(context);
     const classes = classNames({
         "active": context.selectedItem === props.id
     });
-    return <li className={classes}>{props.children}</li>
+    const handleClick = () => {
+        context.handleClick(props.id);
+    };
+    return <li className={classes} onClick={handleClick}>{props.children}</li>
 }
 
 export default BearMenuItem;
