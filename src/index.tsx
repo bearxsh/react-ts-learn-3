@@ -9,6 +9,7 @@ import BearMenu from "./component/BearMenu/BearMenu";
 import BearMenuItem from "./component/BearMenu/BearMenuItem";
 import BearSubMenu from "./component/BearMenu/BearSubMenu";
 import Test from "./component/Test/Test";
+import "./component/BearMenu/test.scss";
 
 const {SubMenu} = Menu;
 
@@ -53,7 +54,10 @@ ReactDOM.render(
                 </Menu>
             </Col>
             <Col span={12}>
-
+                <div className={`a-wrap`}>dd</div>
+                <div className={`b-wrap`}>dd</div>
+                <div className={`c-wrap`}>dd</div>
+                <div className={`d-wrap`}>dd</div>
             </Col>
         </Row>
     </React.StrictMode>,
