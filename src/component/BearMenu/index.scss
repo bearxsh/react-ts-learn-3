@@ -22,9 +22,13 @@ ul {
 .sub-menu-wrap {
     position: relative;
     cursor: pointer;
+    display: flex;
     &:hover .sub-menu {
         opacity: 1;
         pointer-events: all;
+    }
+    &:hover .arrow-icon {
+        transform: rotate(-90deg);
     }
 }
 
@@ -52,4 +56,11 @@ ul {
     border-radius: 2px;
     display: flex;
     flex-direction: column;
+}
+
+.arrow-icon {
+    width: 10px;
+    margin-left: 3px;
+    transform: rotate(90deg);
+    transition: transform .3s ease;
 }

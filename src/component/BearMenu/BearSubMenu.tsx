@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import arrow from "./arrow.svg";
 
 interface BearSubMenuProps {
     title: string;
@@ -12,6 +13,7 @@ function BearSubMenu(props: BearSubMenuProps) {
     });
     return <div className={`sub-menu-wrap`}>
         <li>{props.title}</li>
+        <img src={arrow} className="arrow-icon" alt="arrow-icon"/>
         <div className={classes}>
             <div className={`true-content`}>
                 {props.children}
