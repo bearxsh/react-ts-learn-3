@@ -12,8 +12,10 @@ function BearSubMenu(props: BearSubMenuProps) {
         "sub-menu": true
     });
     return <div className={`sub-menu-wrap`}>
-        <li>{props.title}</li>
-        <img src={arrow} className="arrow-icon" alt="arrow-icon"/>
+        <div className={`sub-menu-wrap-title`}>
+            <span>{props.title}</span>
+            <img src={arrow} className="arrow-icon" alt="arrow-icon"/>
+        </div>
         <div className={classes}>
             <div className={`true-content`}>
                 {props.children}

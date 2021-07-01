@@ -28,7 +28,7 @@ code {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   z-index: 50;
   @media screen and (max-width: 1200px) {
-    display: none;
+   // display: none;
   }
 }
 
@@ -63,4 +63,7 @@ code {
   color: blueviolet;
   margin-right: 100px;
   font-weight: bold;
+  @media screen and (max-width: 1200px) {
+    margin-right: 0;
+  }
 }

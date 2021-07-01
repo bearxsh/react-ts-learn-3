@@ -16,6 +16,24 @@ ul {
         &.active {
             color: blueviolet;
         }
+        @media screen and (max-width: 1200px) {
+            margin-right: 0;
+            border-bottom: 1px solid #e3e8ee;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #fff;
+        height: inherit;
+        align-items: flex-start;
     }
 }
 
@@ -26,9 +44,29 @@ ul {
     &:hover .sub-menu {
         opacity: 1;
         pointer-events: all;
+        @media screen and (max-width: 1200px) {
+            display: block;
+        }
     }
     &:hover .arrow-icon {
         transform: rotate(-90deg);
+    }
+    & &-title {
+
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+
+        @media screen and (max-width: 1200px) {
+            margin-right: 0;
+            height: 60px;
+            padding: 0 32px;
+            border-bottom: 1px solid #e3e8ee;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        display: block;
+        width: 100%;
     }
 }
 
@@ -46,6 +84,16 @@ ul {
         &:hover {
             background-color: #f5f5f5;
         }
+        @media screen and (max-width: 1200px) {
+            padding: 5px 32px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        position: static;
+        opacity: 1;
+        display: none;
+        background: #f9f9f9;
+        padding-top: 0;
     }
 }
 
@@ -56,6 +104,13 @@ ul {
     border-radius: 2px;
     display: flex;
     flex-direction: column;
+    & > li:hover {
+        color: blueviolet;
+    }
+    @media screen and (max-width: 1200px) {
+        box-shadow: none;
+        background: #f9f9f9;
+    }
 }
 
 .arrow-icon {
