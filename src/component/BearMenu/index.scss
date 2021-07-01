@@ -91,7 +91,8 @@ ul {
     @media screen and (max-width: 1200px) {
         position: static;
         opacity: 1;
-        display: none;
+        //display: none;
+        height: 0;
         background: #f9f9f9;
         padding-top: 0;
     }
