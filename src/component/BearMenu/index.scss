@@ -42,10 +42,10 @@ ul {
     cursor: pointer;
     display: flex;
     &:hover .sub-menu {
-        opacity: 1;
-        pointer-events: all;
+        //opacity: 1;
+        //pointer-events: all;
         @media screen and (max-width: 1200px) {
-            display: block;
+            //display: block;
         }
     }
     &:hover .arrow-icon {
@@ -74,9 +74,9 @@ ul {
     position: absolute;
     top: 100%;
     padding-top: 12px;
-    opacity: 0;
-    transition: all .3s ease;
-    pointer-events: none;
+    //opacity: 0;
+    //transition: all .3s ease;
+    //pointer-events: none;
     z-index: 100;
     & li {
         padding: 5px 15px;
@@ -91,8 +91,6 @@ ul {
     @media screen and (max-width: 1200px) {
         position: static;
         opacity: 1;
-        //display: none;
-        height: 0;
         background: #f9f9f9;
         padding-top: 0;
     }
@@ -119,4 +117,28 @@ ul {
     margin-left: 3px;
     transform: rotate(90deg);
     transition: transform .3s ease;
+}
+
+.collapse-exited {
+    display: none;
+}
+
+.collapse-exiting {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease;
+    transition-property: height;
+}
+
+.collapse-entering {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease;
+    transition-property: height, visibility;
+}
+
+.collapse-entered {
+    display: block;
 }
