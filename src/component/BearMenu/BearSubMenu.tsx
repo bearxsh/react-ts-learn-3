@@ -13,6 +13,17 @@ function BearSubMenu(props: BearSubMenuProps) {
     const classes = classNames({
         "sub-menu": true
     });
+
+    const handleMouseEnter = () => {
+    // 必须是scrollHeight而不是clientHeight
+    console.log(nodeRef.current.scrollHeight);
+     nodeRef.current.style.height = nodeRef.current.scrollHeight + 'px';
+        console.log("鼠标移入");
+    }
+    const handleMouseLeave = () => {
+    nodeRef.current.style.height = '0';
+            console.log("鼠标移出");
+        }
     const handleClick = () => {
         if (nodeRef) {
         setShow(!show);
@@ -51,7 +62,7 @@ function BearSubMenu(props: BearSubMenuProps) {
       console.log("exited");
       };
 
-    return <div className={`sub-menu-wrap`}>
+    return <div className={`sub-menu-wrap`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <div className={`sub-menu-wrap-title`} onClick={handleClick}>
             <span>{props.title}</span>
             <img src={arrow} className="arrow-icon" alt="arrow-icon"/>

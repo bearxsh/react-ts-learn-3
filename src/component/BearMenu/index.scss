@@ -75,7 +75,9 @@ ul {
     top: 100%;
     padding-top: 12px;
     //opacity: 0;
-    //transition: all .3s ease;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
     //pointer-events: none;
     z-index: 100;
     & li {
@@ -90,7 +92,7 @@ ul {
     }
     @media screen and (max-width: 1200px) {
         position: static;
-        opacity: 1;
+        //opacity: 1;
         background: #f9f9f9;
         padding-top: 0;
     }
@@ -120,25 +122,16 @@ ul {
 }
 
 .collapse-exited {
-    display: none;
+    //display: none;
 }
 
 .collapse-exiting {
-    position: relative;
-    height: 0;
+    // overflow是重点
     overflow: hidden;
-    transition: .3s ease;
-    transition-property: height;
+    transition: height .3s ease;
 }
 
 .collapse-entering {
-    position: relative;
-    height: 0;
     overflow: hidden;
-    transition: .3s ease;
-    transition-property: height;
-}
-
-.collapse-entered {
-    display: block;
+    transition: height .3s ease;
 }
