@@ -136,7 +136,7 @@ ul {
     height: 0;
     overflow: hidden;
     transition: .3s ease;
-    transition-property: height, visibility;
+    transition-property: height;
 }
 
 .collapse-entered {

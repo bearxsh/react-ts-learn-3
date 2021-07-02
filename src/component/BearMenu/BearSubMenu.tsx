@@ -47,6 +47,10 @@ function BearSubMenu(props: BearSubMenuProps) {
         nodeRef.current.style.height = '0';
       };
 
+        const handleExited = () => {
+      console.log("exited");
+      };
+
     return <div className={`sub-menu-wrap`}>
         <div className={`sub-menu-wrap-title`} onClick={handleClick}>
             <span>{props.title}</span>
@@ -61,6 +65,7 @@ function BearSubMenu(props: BearSubMenuProps) {
                 onEntered={handleEntered}
                 onExit={handleExit}
                 onExiting={handleExiting}
+                onExited={handleExited}
               >
                 {(state: any) => (
                   <div ref={nodeRef} className={`sub-menu collapse-${state}`}>
